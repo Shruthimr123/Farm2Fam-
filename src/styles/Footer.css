@@ -1,0 +1,217 @@
+/* =======================
+   Base Footer Styles
+   ======================= */
+
+   .footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 20px;    
+  box-sizing: border-box;
+} 
+
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;            /* Allow children to wrap on small screens */
+  justify-content: space-around;
+  align-items: flex-start;    /* Align items to top for multi-line content */
+  gap: 40px;                   /* Spacing between columns */
+}
+
+.one,
+.two,
+.three {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.footer p {
+  text-align: center;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #f2f1f1;
+  margin: 2px 0;
+  font-size: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.download {
+  padding: 10px 0;
+}
+
+.playstore,
+.appstore {
+  height: 50px;
+  width: 150px;
+  margin: 5px 0;
+  object-fit: contain;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-pinterest {
+  font-size: 20px;            /* Use font-size instead of fixed width/height */
+  margin: 5px;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-pinterest:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+
+/* =======================
+   Tablet & Small Desktop
+   (up to 1024px)
+   ======================= */
+@media only screen and (max-width: 1024px) {
+  .footer-section {
+    gap: 30px;
+  }
+
+  .one,
+  .two,
+  .three {
+    line-height: 1.5;
+  }
+}
+
+
+/* =======================
+   Mobile Landscape & Large Phones
+   (up to 768px)
+   ======================= */
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 15px 15px;
+  }
+
+  .footer-section {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .one,
+  .two,
+  .three {
+    flex: 1 1 200px;         /* Allow columns to shrink to ~200px before wrapping */
+    margin: 0 10px;
+  }
+
+  .footer a,
+  .footer p {
+    font-size: 13px;
+  }
+
+  .playstore,
+  .appstore {
+    width: 130px;
+    height: 45px;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram,
+  .fa-pinterest {
+    font-size: 18px;
+  }
+}
+
+
+/* =======================
+   Mobile Portrait & Small Phones
+   (up to 480px)
+   ======================= */
+@media only screen and (max-width: 480px) {
+  .footer {
+    padding: 25px 10px 10px;
+  }
+
+  /* Stack all columns vertically */
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    text-align: center;      /* Center text when stacked */
+    margin: 0;
+  }
+
+  .footer a,
+  .footer p {
+    font-size: 12px;
+  }
+
+  .playstore,
+  .appstore {
+    width: 120px;
+    height: 40px;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram,
+  .fa-pinterest {
+    font-size: 16px;
+  }
+}
+
+
+/* =======================
+   Very Small Phones
+   (up to 320px)
+   ======================= */
+@media only screen and (max-width: 320px) {
+  .footer {
+    padding: 20px 8px 8px;
+  }
+
+  .footer-section {
+    gap: 15px;
+  }
+
+  .one,
+  .two,
+  .three {
+    margin: 0;
+  }
+
+  .footer a,
+  .footer p {
+    font-size: 11px;
+    margin: 2px 0;
+  }
+
+  .playstore,
+  .appstore {
+    width: 100px;
+    height: 35px;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram,
+  .fa-pinterest {
+    font-size: 14px;
+    margin: 4px;
+  }
+}

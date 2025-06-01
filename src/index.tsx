@@ -1,19 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client"
+import { Provider } from "react-redux";
+import { store } from "./app/store"
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root')!).render(
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+      <PayPalScriptProvider options={
+        {
+            "clientId": "ARsqEf9uupraJwNxRNj4a0snJ2kh9AFrqd7EpUhH3VrYHD93sBAUuTIZni9zAYxx0LLXJxsMvCPjmgWa",
+            "currency": "USD"
+        }
+    }>
+    <BrowserRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>
+    </PayPalScriptProvider>
+
+)

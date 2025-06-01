@@ -1,0 +1,145 @@
+/* Main Container */
+.container {
+  width: 100%;
+  margin-top: 0px;
+}
+
+/* Product Grid */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Product Card */
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  height: 300px;
+  width: 100%; /* Use full width of column */
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* Image */
+.product-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+/* Info Section */
+.product-info {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.product-info h4 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Actions */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Quantity Selector */
+.qty-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qty-selector button {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.qty-selector span {
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+/* Add to Cart */
+.add-to-cart {
+  background-color: #56b02c;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #469e22;
+}
+
+/* Medium Screens - 3 Columns */
+@media only screen and (max-width: 992px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets - 2 Columns */
+@media only screen and (max-width: 768px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phones - 1 Column */
+@media only screen and (max-width: 480px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .product-card {
+    height: 280px;
+  }
+
+  .product-info h4 {
+    font-size: 14px;
+  }
+
+  .product-info p {
+    font-size: 13px;
+  }
+
+  .add-to-cart {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
