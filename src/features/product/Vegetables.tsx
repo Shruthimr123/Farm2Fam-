@@ -1,6 +1,6 @@
 // src/components/products/Vegetables.tsx
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
 import { getProductsAPI } from "../api/product/getProductApi";
 import { ProductPayload } from "../../types/product";
 import { addToCart } from "../cart/CartSlice";

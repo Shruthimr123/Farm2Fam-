@@ -11,6 +11,8 @@ import Vegetables from "./features/product/Vegetables";
 import Fruits from "./features/product/Fruits";
 import PaymentPage from "./features/components/PaymentPage";
 import OrdersPage from "./features/components/OrdersPage";
+import ForgotPassword from "./features/components/ForgotPassword";
+import ResetPassword from "./features/components/ResetPassword";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+
       </Routes>
 
       <CartPersistor />

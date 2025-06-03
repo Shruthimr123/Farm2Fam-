@@ -1,6 +1,6 @@
 // src/components/products/Fruits.tsx
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
 import { getProductsAPI } from "../api/product/getProductApi";
 import { ProductPayload } from "../../types/product";
 import { addToCart } from "../cart/CartSlice";
@@ -41,7 +41,7 @@ const Fruits: React.FC = () => {
   );
 
   return (
-    <div className="container">
+    <div className="container"  style={{ marginTop:" 100px"}}>
       {/* <h2 style={{ textAlign: "center" }}>Fruits</h2> */}
       {loading ? (
         <p style={{ textAlign: "center" }}>Loading...</p>

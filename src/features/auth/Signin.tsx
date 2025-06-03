@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signInAPI } from "../api/auth/loginApi";
-import { signOut } from "./AuthSlice"; // import signOut action
 import { AppDispatch, RootState } from "../../app/store";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Signin.css";
 import { loginSchema, loginSchemaType } from "./LoginSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod'
-import { PayPalButtons ,PayPalScriptProvider} from "@paypal/react-paypal-js";
 
 const SignIn: React.FC = () => {
 
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const { loading, error, isAuthenticated } = useSelector(
     (state: RootState) => state.auth
@@ -42,12 +37,6 @@ const SignIn: React.FC = () => {
       errors
     }
   } = useForm<loginSchemaType>({ resolver: zodResolver(loginSchema) })
-
-  const handleLogout = () => {
-    dispatch(signOut());
-    navigate("/signin");  
-  };
-
 
   return (
     <>
@@ -76,11 +65,14 @@ const SignIn: React.FC = () => {
             </button>
             {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
           </form>
-        
+
           <p style={{ marginTop: "20px" }}>
             Don't have an account? <a className="signup-link" href="/">Signup</a>
           </p>
-         {isAuthenticated && <p style={{color:"green"}}>Login Successfull</p>}
+          <p style={{ marginTop: "10px" }}>
+            <a href="/forgot-password" className="signup-link">Forgot Password?</a>
+          </p>
+          {isAuthenticated && <p style={{ color: "green" }}>Login Successfull</p>}
         </div>
       </div>
     </>

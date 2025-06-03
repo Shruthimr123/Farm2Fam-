@@ -8,17 +8,17 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-      <PayPalScriptProvider options={
+    <PayPalScriptProvider options={
         {
-            "clientId": "ARsqEf9uupraJwNxRNj4a0snJ2kh9AFrqd7EpUhH3VrYHD93sBAUuTIZni9zAYxx0LLXJxsMvCPjmgWa",
+            "clientId": "AcEpwCsIyg9uBsRVY04DOVtMqQGZ7cNjuwBeON-gLSROFgT_V5sMdJLstzBQUwe0QUsETTZ73rBHX7z1",
             "currency": "USD"
         }
     }>
-    <BrowserRouter>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </BrowserRouter>
+        <BrowserRouter>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </BrowserRouter>
     </PayPalScriptProvider>
 
 )

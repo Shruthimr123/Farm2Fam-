@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../app/store";
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector } from "../../app/hooks/hooks";
 import {
   removeFromCart,
   clearCart,

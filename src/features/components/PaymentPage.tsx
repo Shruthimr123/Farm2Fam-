@@ -47,7 +47,7 @@ const PaymentPage = () => {
 
     setTimeout(() => {
       navigate("/orders");
-    }, 3000);
+    }, 1000);
   };
 
   return (
@@ -102,3 +102,4 @@ const PaymentPage = () => {
 };
 
 export default PaymentPage;
+

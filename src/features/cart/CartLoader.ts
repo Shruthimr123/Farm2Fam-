@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
 import { getCartFromLocalStorage, setCartItems } from "./CartSlice";
 
 const CartLoader: React.FC = () => {
